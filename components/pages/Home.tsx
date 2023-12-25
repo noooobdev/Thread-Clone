@@ -6,7 +6,7 @@ import { HiArrowsRightLeft } from "react-icons/hi2";
 
 const Home = () => {
   return (
-    <div className="flex flex-col h-full justify-center items-center relative  px-[480px]">
+    <div className="flex flex-col h-full justify-center items-center relative px-[480px]">
       <StartThread />
       <Post />
       <Button

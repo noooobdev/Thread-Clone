@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { SlOptions } from "react-icons/sl";
-import { AiOutlineHeart } from "react-icons/ai";
-import { FaRegComment } from "react-icons/fa";
-import { TbRepeat } from "react-icons/tb";
-import { FiSend } from "react-icons/fi";
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -20,6 +17,10 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import { Button } from "./ui/button";
+import Like from "@/app/_assets/icons/Like.svg";
+import Repeat from "@/app/_assets/icons/repeat.svg";
+import Share from "@/app/_assets/icons/Share.svg";
+import Comment from "@/app/_assets/icons/Comment.svg";
 
 const Post = () => {
   const [effect, setEffect] = useState(false);
@@ -36,20 +37,22 @@ const Post = () => {
             <div className="flex justify-between items-center">
               <HoverCard>
                 <HoverCardTrigger asChild>
-                  <h1 className="text-sm font-semibold hover:cursor-pointer hover:underline">
+                  <h1 className="text-sm font-semibold hover:cursor-pointer hover:underline dark:text-white">
                     MrWhiteguy
                   </h1>
                 </HoverCardTrigger>
-                <HoverCardContent className="w-80">
+                <HoverCardContent className="w-80 dark:bg-[#171717]">
                   <div>
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center ">
                       <div className="">
-                        <h1 className="font-semibold text-lg">
+                        <h1 className="font-semibold text-lg dark:text-white">
                           Micheal Jackson
                         </h1>
                         <div className="flex gap-2 items-center">
-                          <h1 className="text-base">MrWhiteguy</h1>
-                          <h1 className="text-xs bg-gray-200 p-1 rounded-full text-slate-800">
+                          <h1 className="text-base dark:text-white pb-10">
+                            MrWhiteguy
+                          </h1>
+                          <h1 className="text-xs bg-gray-200 p-1 rounded-full text-slate-800 dark:bg-[#171717]">
                             threads.net
                           </h1>
                         </div>
@@ -59,13 +62,13 @@ const Post = () => {
                         <AvatarFallback>CN</AvatarFallback>
                       </Avatar>
                     </div>
-                    <h1 className="text-base font-normal mt-3">
+                    <h1 className="text-base font-normal mt-3 dark:text-white">
                       World's Largest Pedo
                     </h1>
                     <h1 className="text-gray-300 text-sm mt-3">
                       900k followers
                     </h1>
-                    <Button className="w-full mt-2 text-center flex justify-center rounded-xl bg-black">
+                    <Button className="w-full mt-2 text-center flex justify-center rounded-xl bg-black dark:bg-white dark:text-black">
                       Follow
                     </Button>
                   </div>
@@ -98,7 +101,7 @@ const Post = () => {
                 </DropdownMenu>
               </div>
             </div>
-            <h1 className="font-normal text-sm ">
+            <h1 className="font-normal text-sm dark:text-white">
               Seems like Thread Seems like Thread Seems like Thread Seems like
               Thread Seems like Threadv vSeems like Thread Thread Seems like
               Threadv vSeems like Thread Thread Seems like Threadv vSeems like
@@ -111,10 +114,10 @@ const Post = () => {
       </div>
       <div className="pl-10">
         <div className="flex gap-3 ">
-          <AiOutlineHeart className="text-2xl hover:bg-slate-200 rounded-full" />
-          <FaRegComment className="text-2xl hover:bg-slate-200 rounded-full " />
-          <TbRepeat className="text-2xl hover:bg-slate-200 rounded-full" />
-          <FiSend className="text-2xl hover:bg-slate-200 rounded-full" />
+          <Like />
+          <Comment />
+          <Repeat />
+          <Share />
         </div>
         <div className="flex gap-2 items-center">
           <h1 className="text-sm font-normal text-gray-400 hover:underline hover:cursor-pointer">
