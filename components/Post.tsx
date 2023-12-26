@@ -17,10 +17,10 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import { Button } from "./ui/button";
-import Like from "@/app/_assets/icons/Like.svg";
-import Repeat from "@/app/_assets/icons/repeat.svg";
-import Share from "@/app/_assets/icons/Share.svg";
-import Comment from "@/app/_assets/icons/Comment.svg";
+import Like from "@/app/_assets/PostIcons/Like.svg";
+import Repeat from "@/app/_assets/PostIcons/repeat.svg";
+import Share from "@/app/_assets/PostIcons/Share.svg";
+import Comment from "@/app/_assets/PostIcons/Comment.svg";
 
 const Post = () => {
   return (

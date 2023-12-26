@@ -8,14 +8,18 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Logo from "@/app/_assets/Logo.svg";
-import Feed from "@/app/_assets/icons/feed.svg";
-import Explore from "@/app/_assets/icons/explore.svg";
-import Write from "@/app/_assets/icons/write.svg";
-import Heart from "@/app/_assets/icons/heart.svg";
-import User from "@/app/_assets/icons/user.svg";
-import Menu from "@/app/_assets/icons/menu.svg";
+import Feed from "@/app/_assets/NavBarIcons/feed.svg";
+import SelectedFeed from "@/app/_assets/SelectedIcons/feed_selected.svg";
+import Explore from "@/app/_assets/NavBarIcons/explore.svg";
+import SelectedExplore from "@/app/_assets/SelectedIcons/explore_selected.svg";
+import Write from "@/app/_assets/NavBarIcons/write.svg";
+import Heart from "@/app/_assets/NavBarIcons/heart.svg";
+import SelectedHeart from "@/app/_assets/SelectedIcons/heart_selected.svg";
+import User from "@/app/_assets/NavBarIcons/user.svg";
+import SelectedUser from "@/app/_assets/SelectedIcons/user_selected.svg";
+import Menu from "@/app/_assets/NavBarIcons/menu.svg";
 import { Button } from "./ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
 import AddPostDialog from "./AddPostDialog";
@@ -31,6 +35,22 @@ const Navbar = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
+  const [activeTab, setActiveTab] = useState("");
+  const pathname = usePathname();
+
+  useEffect(() => {
+    // Set the active tab based on the current route
+    if (pathname === "/") {
+      setActiveTab("feed");
+    } else if (pathname === "/search") {
+      setActiveTab("explore");
+    } else if (pathname === "/activity") {
+      setActiveTab("activity");
+    } else if (pathname === "/profile") {
+      setActiveTab("profile");
+    }
+  }, [pathname]);
+
   return (
     <div className="flex flex-row px-12 py-2  items-center justify-evenly w-full">
       <Logo className="cursor-pointer" />
@@ -40,14 +60,14 @@ const Navbar = () => {
           className=" p-8 "
           onClick={() => router.push("/")}
         >
-          <Feed />
+          {activeTab === "feed" ? <SelectedFeed /> : <Feed />}
         </Button>
         <Button
           variant="ghost"
           className=" p-8 "
           onClick={() => router.push("/search")}
         >
-          <Explore />
+          {activeTab === "explore" ? <SelectedExplore /> : <Explore />}
         </Button>
         <Dialog>
           <DialogTrigger asChild>
@@ -65,14 +85,14 @@ const Navbar = () => {
           className=" p-8 "
           onClick={() => router.push("/activity")}
         >
-          <Heart />
+          {activeTab === "activity" ? <SelectedHeart /> : <Heart />}
         </Button>
         <Button
           variant="ghost"
           className=" p-8 "
           onClick={() => router.push("/profile")}
         >
-          <User />
+          {activeTab === "profile" ? <SelectedUser /> : <User />}
         </Button>
       </div>
       <DropdownMenu>
