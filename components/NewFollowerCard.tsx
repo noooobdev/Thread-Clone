@@ -16,18 +16,20 @@ const NewFollowerCard = () => {
           <div>
             <HoverCard>
               <HoverCardTrigger asChild>
-                <h1 className="text-sm font-semibold hover:cursor-pointer hover:underline">
+                <h1 className="text-sm font-semibold hover:cursor-pointer hover:underline dark:text-white">
                   im_beedhan
                 </h1>
               </HoverCardTrigger>
-              <HoverCardContent className="w-80">
+              <HoverCardContent className="w-80 dark:bg-[#171717]">
                 <div>
                   <div className="flex justify-between items-center">
                     <div className="">
-                      <h1 className="font-semibold text-lg">im_beedhan</h1>
+                      <h1 className="font-semibold text-lg dark:text-white">
+                        im_beedhan
+                      </h1>
                       <div className="flex gap-2 items-center">
-                        <h1 className="text-sm ">Bee Dhan</h1>
-                        <h1 className="text-xs bg-gray-200 p-1 rounded-full text-slate-800">
+                        <h1 className="text-sm dark:text-white">Bee Dhan</h1>
+                        <h1 className="text-xs bg-gray-200 dark:bg-[#171717] dark:text-slate-600 p-1 rounded-full text-slate-800">
                           threads.net
                         </h1>
                       </div>
@@ -37,8 +39,8 @@ const NewFollowerCard = () => {
                       <AvatarFallback>CN</AvatarFallback>
                     </Avatar>
                   </div>
-                  <h1 className="text-base font-normal mt-3">
-                    World's Largest Pedo
+                  <h1 className="text-base font-normal mt-3 dark:text-white">
+                    Worlds Largest Pedo
                   </h1>
                   <h1 className="text-gray-300 text-sm mt-3">900k followers</h1>
                   <Button className="w-full mt-2 text-center flex justify-center rounded-xl bg-black">
@@ -60,7 +62,7 @@ const NewFollowerCard = () => {
             <AvatarImage src="https://www.celebnest.com/uploads/celebs/1/michael_jackson.jpg" />
             <AvatarFallback>MJ</AvatarFallback>
           </Avatar>
-          <h1 className="text-sm ">28 Followers</h1>
+          <h1 className="text-sm dark:text-white">28 Followers</h1>
         </div>
         <Separator className="mt-2" />
       </div>

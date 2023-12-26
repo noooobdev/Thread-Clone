@@ -33,7 +33,7 @@ const StartThread = () => {
             Post
           </Button>
         </div>
-        <Separator />
+        <Separator className="dark:bg-slate-300 border-1" />
         <DialogContent className="sm:max-w-[600px] rounded-xl dark:border-[#3d3d3d]">
           <AddPostDialog />
         </DialogContent>

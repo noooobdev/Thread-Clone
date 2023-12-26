@@ -13,7 +13,7 @@ const page = () => {
           <input
             type="text"
             placeholder="Search"
-            className="border border-gray-200 w-full p-4 pl-12 rounded-xl bg-gray-50  focus:outline-none"
+            className="border border-gray-200 w-full p-4 pl-12 rounded-xl bg-gray-50  focus:outline-none dark:bg-[#171717] dark:border-[#3d3d3d]"
           />
         </div>
         <NewFollowerCard />

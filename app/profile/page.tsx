@@ -9,8 +9,8 @@ const page = () => {
       <Navbar />
       <div className="flex flex-col h-full justify-center  items-center relative  px-[480px]">
         <div className="flex justify-between w-full">
-          <div>
-            <h1>Niraj</h1>
+          <div className="dark:text-white">
+            <h1 className="text-3xl">Niraj</h1>
             <div className="flex gap-2">
               <h1>_n1r4j_</h1>
               <h1 className="text-xs bg-gray-200 p-1 rounded-full text-slate-800">

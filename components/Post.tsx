@@ -23,8 +23,6 @@ import Share from "@/app/_assets/icons/Share.svg";
 import Comment from "@/app/_assets/icons/Comment.svg";
 
 const Post = () => {
-  const [effect, setEffect] = useState(false);
-
   return (
     <div className="flex flex-col hover:cursor-pointer justify-center">
       <div className="p-2 flex justify-between ">
@@ -41,7 +39,7 @@ const Post = () => {
                     MrWhiteguy
                   </h1>
                 </HoverCardTrigger>
-                <HoverCardContent className="w-80 dark:bg-[#171717]">
+                <HoverCardContent className="w-80 dark:bg-[#171717] dark:border-[#3d3d3d]">
                   <div>
                     <div className="flex justify-between items-center ">
                       <div className="">
@@ -52,7 +50,7 @@ const Post = () => {
                           <h1 className="text-base dark:text-white pb-10">
                             MrWhiteguy
                           </h1>
-                          <h1 className="text-xs bg-gray-200 p-1 rounded-full text-slate-800 dark:bg-[#171717]">
+                          <h1 className="text-xs bg-gray-200 p-1 rounded-full text-slate-800 ">
                             threads.net
                           </h1>
                         </div>
@@ -63,7 +61,7 @@ const Post = () => {
                       </Avatar>
                     </div>
                     <h1 className="text-base font-normal mt-3 dark:text-white">
-                      World's Largest Pedo
+                      Worlds Largest Pedo
                     </h1>
                     <h1 className="text-gray-300 text-sm mt-3">
                       900k followers
@@ -79,7 +77,7 @@ const Post = () => {
                 <h1 className="font-light text-slate-400 text-sm">35m</h1>
                 <DropdownMenu>
                   <DropdownMenuTrigger>
-                    <SlOptions className=" rounded-full cursor-pointer" />
+                    <SlOptions className=" rounded-full cursor-pointer dark:text-white" />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="text-2xl">
                     <DropdownMenuItem className="text-sm font-medium cursor-pointer">
@@ -101,7 +99,7 @@ const Post = () => {
                 </DropdownMenu>
               </div>
             </div>
-            <h1 className="font-normal text-sm dark:text-white">
+            <h1 className="font-light text-sm dark:text-white">
               Seems like Thread Seems like Thread Seems like Thread Seems like
               Thread Seems like Threadv vSeems like Thread Thread Seems like
               Threadv vSeems like Thread Thread Seems like Threadv vSeems like
@@ -129,7 +127,7 @@ const Post = () => {
           </h1>
         </div>
       </div>
-      <Separator className="mt-2" />
+      <Separator className="mt-2 dark:bg-slate-300 border-1" />
     </div>
   );
 };

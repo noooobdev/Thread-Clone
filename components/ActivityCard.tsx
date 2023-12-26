@@ -17,7 +17,7 @@ const ActivityCard = () => {
             <HoverCard>
               <div className="flex gap-2">
                 <HoverCardTrigger asChild>
-                  <h1 className="text-sm font-semibold hover:cursor-pointer hover:underline">
+                  <h1 className="text-sm font-semibold hover:cursor-pointer hover:underline dark:text-white">
                     im_beedhan
                   </h1>
                 </HoverCardTrigger>
@@ -41,7 +41,7 @@ const ActivityCard = () => {
                     </Avatar>
                   </div>
                   <h1 className="text-base font-normal mt-3">
-                    World's Largest Pedo
+                    {"World's"} Largest Pedo
                   </h1>
                   <h1 className="text-gray-300 text-sm mt-3">900k followers</h1>
                   <Button className="w-full mt-2 text-center flex justify-center rounded-xl bg-black">
