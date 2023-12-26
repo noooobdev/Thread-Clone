@@ -111,7 +111,7 @@ const Post = () => {
         </div>
       </div>
       <div className="pl-10">
-        <div className="flex gap-3 ">
+        <div className="flex gap-3 h-full">
           <Like />
           <Comment />
           <Repeat />

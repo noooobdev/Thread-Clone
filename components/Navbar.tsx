@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
@@ -12,13 +11,17 @@ import { usePathname, useRouter } from "next/navigation";
 import Logo from "@/app/_assets/Logo.svg";
 import Feed from "@/app/_assets/NavBarIcons/feed.svg";
 import SelectedFeed from "@/app/_assets/SelectedIcons/feed_selected.svg";
+import DarkSelectedFeed from "@/app/_assets/DarkSelectedIcon/feed_selected.svg";
 import Explore from "@/app/_assets/NavBarIcons/explore.svg";
 import SelectedExplore from "@/app/_assets/SelectedIcons/explore_selected.svg";
+import DarkSelectedExplore from "@/app/_assets/DarkSelectedIcon/explore_selected.svg";
 import Write from "@/app/_assets/NavBarIcons/write.svg";
 import Heart from "@/app/_assets/NavBarIcons/heart.svg";
 import SelectedHeart from "@/app/_assets/SelectedIcons/heart_selected.svg";
+import DarkSelectedHeart from "@/app/_assets/DarkSelectedIcon/heart_selected.svg";
 import User from "@/app/_assets/NavBarIcons/user.svg";
-import SelectedUser from "@/app/_assets/SelectedIcons/user_selected.svg";
+import SelectedUser from "@/app/_assets//SelectedIcons/user_selected.svg";
+import DarkSelectedUser from "@/app/_assets/DarkSelectedIcon/user_selected.svg";
 import Menu from "@/app/_assets/NavBarIcons/menu.svg";
 import { Button } from "./ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
@@ -60,14 +63,30 @@ const Navbar = () => {
           className=" p-8 "
           onClick={() => router.push("/")}
         >
-          {activeTab === "feed" ? <SelectedFeed /> : <Feed />}
+          {activeTab === "feed" ? (
+            theme === "dark" ? (
+              <DarkSelectedFeed />
+            ) : (
+              <SelectedFeed />
+            )
+          ) : (
+            <Feed />
+          )}
         </Button>
         <Button
           variant="ghost"
           className=" p-8 "
           onClick={() => router.push("/search")}
         >
-          {activeTab === "explore" ? <SelectedExplore /> : <Explore />}
+          {activeTab === "explore" ? (
+            theme === "dark" ? (
+              <DarkSelectedExplore />
+            ) : (
+              <SelectedExplore />
+            )
+          ) : (
+            <Explore />
+          )}
         </Button>
         <Dialog>
           <DialogTrigger asChild>
@@ -85,14 +104,30 @@ const Navbar = () => {
           className=" p-8 "
           onClick={() => router.push("/activity")}
         >
-          {activeTab === "activity" ? <SelectedHeart /> : <Heart />}
+          {activeTab === "activity" ? (
+            theme === "dark" ? (
+              <DarkSelectedHeart />
+            ) : (
+              <SelectedHeart />
+            )
+          ) : (
+            <Heart />
+          )}
         </Button>
         <Button
           variant="ghost"
           className=" p-8 "
           onClick={() => router.push("/profile")}
         >
-          {activeTab === "profile" ? <SelectedUser /> : <User />}
+          {activeTab === "profile" ? (
+            theme === "dark" ? (
+              <DarkSelectedUser />
+            ) : (
+              <SelectedUser />
+            )
+          ) : (
+            <User />
+          )}
         </Button>
       </div>
       <DropdownMenu>
