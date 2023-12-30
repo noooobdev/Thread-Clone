@@ -27,6 +27,8 @@ import Menu from "@/app/_assets/NavBarIcons/menu.svg";
 import { Button } from "./ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
 import AddPostDialog from "./AddPostDialog";
+import { motion } from "framer-motion";
+
 const Navbar = () => {
   const router = useRouter();
   const [theme, setTheme] = useState("light");
@@ -57,9 +59,14 @@ const Navbar = () => {
 
   return (
     <div className="flex flex-row px-12 py-2  items-center justify-evenly w-full">
-      <div className="cursor-pointer">
+      <motion.div
+        className="cursor-pointer"
+        initial={{ scale: 1 }}
+        whileHover={{ scale: 1.08 }}
+        // transition={{ duration: 0.5, }}
+      >
         {theme === "dark" ? <DarkLogo /> : <Logo />}
-      </div>
+      </motion.div>
       <div className="flex gap-3 justify-center">
         <Button
           variant="ghost"
