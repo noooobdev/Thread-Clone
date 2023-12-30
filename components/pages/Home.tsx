@@ -11,7 +11,7 @@ const Home = () => {
       <Post />
       <Button
         variant="secondary"
-        className="absolute -bottom-96 left-60 hover:animate-spin "
+        className="absolute -bottom-80 left-56 rounded-full p-6 dark:text-white dark:bg-[#3d3d3d] "
       >
         For you
         <HiArrowsRightLeft className="text-slate-400 text-center ml-2" />

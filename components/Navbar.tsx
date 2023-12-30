@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { usePathname, useRouter } from "next/navigation";
 import Logo from "@/app/_assets/Logo.svg";
+import DarkLogo from "@/app/_assets/DarkLogo.svg";
 import Feed from "@/app/_assets/NavBarIcons/feed.svg";
 import SelectedFeed from "@/app/_assets/SelectedIcons/feed_selected.svg";
 import DarkSelectedFeed from "@/app/_assets/DarkSelectedIcon/feed_selected.svg";
@@ -56,7 +57,9 @@ const Navbar = () => {
 
   return (
     <div className="flex flex-row px-12 py-2  items-center justify-evenly w-full">
-      <Logo className="cursor-pointer" />
+      <div className="cursor-pointer">
+        {theme === "dark" ? <DarkLogo /> : <Logo />}
+      </div>
       <div className="flex gap-3 justify-center">
         <Button
           variant="ghost"
@@ -94,7 +97,7 @@ const Navbar = () => {
               <Write />
             </Button>
           </DialogTrigger>
-          <DialogContent className="sm:max-w-[600px] rounded-xl">
+          <DialogContent className="sm:max-w-[600px] rounded-xl dark:border-[#3d3d3d]">
             <AddPostDialog />
           </DialogContent>
         </Dialog>
@@ -134,18 +137,27 @@ const Navbar = () => {
         <DropdownMenuTrigger>
           <Menu className=" cursor-pointer" />
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="text-2xl">
-          <DropdownMenuItem className="cursor-pointer" onClick={handleTheme}>
+        <DropdownMenuContent className="text-2xl dark:bg-[#171717] dark:border-[#3d3d3d]">
+          <DropdownMenuItem
+            className="cursor-pointer dark:text-white"
+            onClick={handleTheme}
+          >
             Switch Appeareance
           </DropdownMenuItem>
           <DropdownMenuSeparator />
-          <DropdownMenuItem className="cursor-pointer">About</DropdownMenuItem>
+          <DropdownMenuItem className="cursor-pointer dark:text-white">
+            About
+          </DropdownMenuItem>
           <DropdownMenuSeparator />
-          <DropdownMenuItem className="cursor-pointer">
+          <DropdownMenuItem className="cursor-pointer dark:text-white">
+            Settings
+          </DropdownMenuItem>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem className="cursor-pointer dark:text-white">
             Report a problem
           </DropdownMenuItem>
           <DropdownMenuSeparator />
-          <DropdownMenuItem className="cursor-pointer">
+          <DropdownMenuItem className="cursor-pointer dark:text-white">
             Log Out
           </DropdownMenuItem>
         </DropdownMenuContent>
