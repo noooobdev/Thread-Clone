@@ -28,7 +28,7 @@ const StartThread = () => {
           <Button
             variant="outline"
             disabled
-            className="rounded-2xl px-5 py-1 dark:bg:white"
+            className="rounded-2xl px-5 py-1 dark:text-white"
           >
             Post
           </Button>

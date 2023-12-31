@@ -23,31 +23,31 @@ const ActivityCard = () => {
                 </HoverCardTrigger>
                 <h1 className="text-sm text-gray-400 font-normal">3h</h1>
               </div>
-              <HoverCardContent className="w-80">
-                <div>
-                  <div className="flex justify-between items-center">
-                    <div className="">
-                      <h1 className="font-semibold text-lg">im_beedhan</h1>
-                      <div className="flex gap-2 items-center">
-                        <h1 className="text-sm ">Bee Dhan</h1>
-                        <h1 className="text-xs bg-gray-200 p-1 rounded-full text-slate-800">
-                          threads.net
-                        </h1>
-                      </div>
+              <HoverCardContent className="w-80 dark:bg-[#171717] dark:border-[#3d3d3d]">
+                <div className="flex justify-between items-center">
+                  <div className="">
+                    <h1 className="font-semibold text-lg dark:text-white">
+                      im_beedhan
+                    </h1>
+                    <div className="flex gap-2 items-center">
+                      <h1 className="text-sm dark:text-white">Bee Dhan</h1>
+                      <h1 className="text-xs bg-gray-200 p-1 rounded-full text-slate-800">
+                        threads.net
+                      </h1>
                     </div>
-                    <Avatar className="h-16 w-16">
-                      <AvatarImage src="https://www.celebnest.com/uploads/celebs/1/michael_jackson.jpg" />
-                      <AvatarFallback>CN</AvatarFallback>
-                    </Avatar>
                   </div>
-                  <h1 className="text-base font-normal mt-3">
-                    {"World's"} Largest Pedo
-                  </h1>
-                  <h1 className="text-gray-300 text-sm mt-3">900k followers</h1>
-                  <Button className="w-full mt-2 text-center flex justify-center rounded-xl bg-black">
-                    Follow
-                  </Button>
+                  <Avatar className="h-16 w-16">
+                    <AvatarImage src="https://www.celebnest.com/uploads/celebs/1/michael_jackson.jpg" />
+                    <AvatarFallback>CN</AvatarFallback>
+                  </Avatar>
                 </div>
+                <h1 className="text-base font-normal mt-3 dark:text-white">
+                  {"World's"} Largest Pedo
+                </h1>
+                <h1 className="text-gray-300 text-sm mt-3">900k followers</h1>
+                <Button className="w-full mt-2 text-center flex justify-center rounded-xl bg-black">
+                  Follow
+                </Button>
               </HoverCardContent>
             </HoverCard>
             <h1 className="text-sm text-gray-400 font-normal">
@@ -55,7 +55,10 @@ const ActivityCard = () => {
             </h1>
           </div>
         </div>
-        <Button variant="outline" className="px-8 py-2 rounded-xl">
+        <Button
+          variant="outline"
+          className="px-8 py-2 rounded-xl dark:text-black dark:bg-white"
+        >
           Follow
         </Button>
       </div>
