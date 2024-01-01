@@ -7,8 +7,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const page = () => {
   return (
-    <div className="flex flex-col h-full justify-center items-center relative  px-[480px]">
-      <Tabs defaultValue="account" className="justify-center w-[480px]">
+    <div className="flex flex-col h-full w-full justify-center items-center relative  ">
+      <Tabs
+        defaultValue="all"
+        className="flex  flex-col items-center justify-center w-full"
+      >
         <TabsList>
           <TabsTrigger value="all">All</TabsTrigger>
           <TabsTrigger value="follows">Follows</TabsTrigger>
@@ -18,12 +21,17 @@ const page = () => {
           <TabsTrigger value="reposts">Reposts</TabsTrigger>
           <TabsTrigger value="verified">Verified</TabsTrigger>
         </TabsList>
-        <TabsContent value="all">
+        <TabsContent
+          value="all"
+          className="w-full flex flex-col justify-center items-center"
+        >
           <ActivityCard />
-          <ActivityCard />{" "}
+          <ActivityCard />
         </TabsContent>
-        <TabsContent value="follows">
-          <ActivityCard />
+        <TabsContent
+          value="follows"
+          className="w-full flex flex-col justify-center items-center"
+        >
           <ActivityCard />
         </TabsContent>
       </Tabs>

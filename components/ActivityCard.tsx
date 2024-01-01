@@ -6,7 +6,7 @@ import { Separator } from "./ui/separator";
 
 const ActivityCard = () => {
   return (
-    <div className=" w-full  ">
+    <div className="w-2/5">
       <div className="flex justify-between items-center pt-4 pb-2">
         <div className="flex items-center gap-3">
           <Avatar className="">
