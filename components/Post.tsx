@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { SlOptions } from "react-icons/sl";
 
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
@@ -110,7 +109,7 @@ const Post = () => {
           </div>
         </div>
       </div>
-      <div className="pl-10">
+      <div className="pl-14">
         <div className="flex gap-3 h-full">
           <Like />
           <Comment />

@@ -52,7 +52,10 @@ const NewFollowerCard = () => {
             <h1 className="text-sm text-gray-400 font-normal">Bee Dhan</h1>
           </div>
         </div>
-        <Button variant="outline" className="px-8 py-2 rounded-xl">
+        <Button
+          variant="outline"
+          className="px-8 py-2 rounded-xl dark:text-white"
+        >
           Follow
         </Button>
       </div>
