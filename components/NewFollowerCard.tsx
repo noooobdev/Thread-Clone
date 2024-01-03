@@ -43,7 +43,7 @@ const NewFollowerCard = () => {
                     Worlds Largest Pedo
                   </h1>
                   <h1 className="text-gray-300 text-sm mt-3">900k followers</h1>
-                  <Button className="w-full mt-2 text-center flex justify-center rounded-xl bg-black">
+                  <Button className="w-full mt-2 text-center flex justify-center rounded-xl bg-black dark:bg-white dark:text-black">
                     Follow
                   </Button>
                 </div>
